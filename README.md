@@ -1,4 +1,4 @@
-SIMULATION AND IMPLEMENTATION OF MULTIPLEXER```
+```SIMULATION AND IMPLEMENTATION OF MULTIPLEXER```
 AIM:
 To design and simulate a 4:1 Multiplexer (MUX) using Verilog HDL in four different modeling styles—Gate-Level, Data Flow, Behavioral, and Structural—and to verify its functionality through a testbench using the Vivado 2023.1 simulation environment. The experiment aims to understand how different abstraction levels in Verilog can be used to describe the same digital logic circuit and analyze their performance.
 
@@ -135,7 +135,7 @@ module tb_mux4x1;
  endmodule
 ```
  OUTPUT:
- ```
+ 
  1)gatelevel
  ![gatelevel](https://github.com/user-attachments/assets/d83ff5b2-3bfe-4cec-849e-01e90216ed0e)
 2)dataflow
