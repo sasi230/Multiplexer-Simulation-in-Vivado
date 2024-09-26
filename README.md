@@ -77,14 +77,15 @@ endmodule
 
 
 4:1 MUX Data Flow Implementation
-
+```
 // mux4_to_1_dataflow.v
 module mux4x1_dataflow(output Y, input I0, I1, I2, I3, input S0,S1);
  assign Y = (~S1 & ~S0 & I0) | (~S1 & S0 & I1) | (S1 & ~S0 & I2) | (S1 & S0 & I3);
 endmodule
+```
 
 4:1 MUX Behavioral Implementation
-
+```
 module mux4x1_behavioral(output reg Y, input I0, I1, I2, I3, input
 S0, S1);
  always @(*)
@@ -98,11 +99,11 @@ S0, S1);
  endcase
  end
 endmodule
+```
 
 4:1 MUX Structural Implementation
-
-module mux4x1_structural(output Y, input I0, I1, I2, I3, input S0,
-S1);
+```
+module mux4x1_structural(output Y, input I0, I1, I2, I3, input S0,S1);
  wire a, b, c, d;
 
  and g1 (a, I0, ~S0, ~S1);
@@ -111,9 +112,9 @@ S1);
  and g4 (d, I3, S0, S1);
  or g5 (Y, a, b, c, d);
 endmodule
-
+```
 Testbench Implementation
-
+```
 module tb_mux4x1;
  reg I0, I1, I2, I3;
  reg S0, S1;
@@ -132,7 +133,7 @@ module tb_mux4x1;
  $finish;
  end
  endmodule
-
+```
  OUTPUT:
  1)gatelevel
  ![gatelevel](https://github.com/user-attachments/assets/d83ff5b2-3bfe-4cec-849e-01e90216ed0e)
