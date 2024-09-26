@@ -62,6 +62,7 @@ Truth Table
 Verilog Code
 
 4:1 MUX Gate-Level Implementation
+//gatelevel
 module mux4x1_gatelevel(output Y, input I0, I1, I2, I3, input S0,S1);
  wire nS0, nS1, a, b, c, d;
  not (nS0, S0);
