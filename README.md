@@ -16,7 +16,7 @@ Project Location: Select the folder where the project will be saved.
 Click Next.
 Project Type: Select RTL Project, then click Next.
 # Add Sources:
-Click on "Add Files" to add the Verilog files (e.g., mux4_to_1_gate.v, mux4_to_1_dataflow.v, etc.).
+1.Click on "Add Files" to add the Verilog files (e.g., mux4_to_1_gate.v, mux4_to_1_dataflow.v, etc.).
 Make sure to check the box "Copy sources into project" to avoid any external file dependencies.
 Click Next.
 Add Constraints: Skip this step by clicking Next (since no constraints are needed for simulation).
