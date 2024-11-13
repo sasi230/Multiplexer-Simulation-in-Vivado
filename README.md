@@ -21,7 +21,7 @@ Project Type: Select RTL Project, then click Next.
 1.Click on "Add Files" to add the Verilog files (e.g., mux4_to_1_gate.v, mux4_to_1_dataflow.v, etc.)
 Make sure to check the box "Copy sources into project" to avoid any external file dependencies.
 Click Next..
-Add Constraints: Skip this step by clicking Next (since no constraints are needed for simulation).
++2.Add Constraints: Skip this step by clicking Next (since no constraints are needed for simulation).
 Default Part Selection:
 You can choose a part based on the FPGA board you are using (if any).
 If no board is used, you can choose any part, for example, xc7a35ticsg324-1L (Artix-7).
