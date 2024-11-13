@@ -1,4 +1,4 @@
-#### SIMULATION AND IMPLEMENTATION OF MULTIPLEXER
+#                                                                  SIMULATION AND IMPLEMENTATION OF MULTIPLEXER
 
                                        
 ### AIM:
