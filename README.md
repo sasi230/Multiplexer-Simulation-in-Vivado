@@ -1,4 +1,6 @@
-                                      ### SIMULATION AND IMPLEMENTATION OF MULTIPLEXER
+                                                                  SIMULATION AND IMPLEMENTATION OF MULTIPLEXER
+
+                                       
 ### AIM:
 To design and simulate a 4:1 Multiplexer (MUX) using Verilog HDL in four different modeling styles—Gate-Level, Data Flow, Behavioral, and Structural—and to verify its functionality through a testbench using the Vivado 2023.1 simulation environment. The experiment aims to understand how different abstraction levels in Verilog can be used to describe the same digital logic circuit and analyze their performance.
 
@@ -74,7 +76,8 @@ module mux4x1_gatelevel(output Y, input I0, I1, I2, I3, input S0,S1);
  or (Y, a, b, c, d);
 endmodule
 ```
-
+## OUTPUT
+![gatelevel](https://github.com/user-attachments/assets/d83ff5b2-3bfe-4cec-849e-01e90216ed0e)
 
 # 4:1 MUX Data Flow Implementation
 ```
@@ -83,7 +86,8 @@ module mux4x1_dataflow(output Y, input I0, I1, I2, I3, input S0,S1);
  assign Y = (~S1 & ~S0 & I0) | (~S1 & S0 & I1) | (S1 & ~S0 & I2) | (S1 & S0 & I3);
 endmodule
 ```
-
+## OUTPUT
+![dataflow](https://github.com/user-attachments/assets/6ca0b4b7-ec5b-4818-80dd-85b261449f80)
 # 4:1 MUX Behavioral Implementation
 ```
 module mux4x1_behavioral(output reg Y, input I0, I1, I2, I3, input
@@ -100,7 +104,8 @@ S0, S1);
  end
 endmodule
 ```
-
+## OUTPUT
+![behav](https://github.com/user-attachments/assets/9dfaa082-fec4-4db0-b11b-4d3148ce3a1e)
 # 4:1 MUX Structural Implementation
 ```
 module mux4x1_structural(output Y, input I0, I1, I2, I3, input S0,S1);
@@ -113,6 +118,8 @@ module mux4x1_structural(output Y, input I0, I1, I2, I3, input S0,S1);
  or g5 (Y, a, b, c, d);
 endmodule
 ```
+## OUTPUT
+![structural](https://github.com/user-attachments/assets/06acd746-bb0a-42ec-a633-d49ca3af6563)
 # Testbench Implementation
 ```
 module tb_mux4x1;
@@ -134,21 +141,11 @@ module tb_mux4x1;
  end
  endmodule
 ```
- ### OUTPUT:
- 
- 1)gatelevel
- ![gatelevel](https://github.com/user-attachments/assets/d83ff5b2-3bfe-4cec-849e-01e90216ed0e)
-2)dataflow
-![dataflow](https://github.com/user-attachments/assets/6ca0b4b7-ec5b-4818-80dd-85b261449f80)
-3)Behavioral 
-![behav](https://github.com/user-attachments/assets/9dfaa082-fec4-4db0-b11b-4d3148ce3a1e)
-4)Structural 
-![structural](https://github.com/user-attachments/assets/06acd746-bb0a-42ec-a633-d49ca3af6563)
-5)testbench
-![WhatsApp Image 2024-09-25 at 9 46 43 PM](https://github.com/user-attachments/assets/7dccd872-76d0-459d-ab97-a711600e421c)
+ ## OUTPUT:
+ ![WhatsApp Image 2024-09-25 at 9 46 43 PM](https://github.com/user-attachments/assets/7dccd872-76d0-459d-ab97-a711600e421c)
 
 
-Sample Output
+## Sample Output
 
 Time=0 | S1=0 S0=0 | Inputs: A=0 B=0 C=0 D=0 | Y_gate=0 | Y_dataflow=0 | Y_behavioral=0 | Y_structural=0
 Time=10 | S1=0 S0=0 | Inputs: A=0 B=0 C=0 D=0 | Y_gate=0 | Y_dataflow=0 | Y_behavioral=0 | Y_structural=0
