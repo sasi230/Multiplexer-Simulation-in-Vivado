@@ -1,13 +1,13 @@
 #                                                                  SIMULATION AND IMPLEMENTATION OF MULTIPLEXER
 
                                        
-### AIM:
+## AIM:
 To design and simulate a 4:1 Multiplexer (MUX) using Verilog HDL in four different modeling styles—Gate-Level, Data Flow, Behavioral, and Structural—and to verify its functionality through a testbench using the Vivado 2023.1 simulation environment. The experiment aims to understand how different abstraction levels in Verilog can be used to describe the same digital logic circuit and analyze their performance.
 
-### APPARATUS REQUIRED:
+## APPARATUS REQUIRED:
 Vivado 2023.1
 
-# Procedure
+## Procedure
 1. Launch Vivado
 Open Vivado 2023.1 by double-clicking the Vivado icon or searching for it in the Start menu.
 2. Create a New Project
@@ -17,7 +17,7 @@ Project Name: Enter a name for the project (e.g., Mux4_to_1).
 Project Location: Select the folder where the project will be saved.
 Click Next.
 Project Type: Select RTL Project, then click Next.
-# Add Sources:
+## Add Sources:
 1. Click on "Add Files" to add the Verilog files (e.g., mux4_to_1_gate.v, mux4_to_1_dataflow.v, etc.)
 Make sure to check the box "Copy sources into project" to avoid any external file dependencies.
 Click Next..
@@ -63,7 +63,7 @@ Once done, close the simulation by going to Simulation → "Close Simulation".
 
 ## Verilog Code
 
-# 4:1 MUX Gate-Level Implementation
+## 4:1 MUX Gate-Level Implementation
 ```
 module mux4x1_gatelevel(output Y, input I0, I1, I2, I3, input S0,S1);
  wire nS0, nS1, a, b, c, d;
@@ -79,7 +79,7 @@ endmodule
 ## OUTPUT
 ![gatelevel](https://github.com/user-attachments/assets/d83ff5b2-3bfe-4cec-849e-01e90216ed0e)
 
-# 4:1 MUX Data Flow Implementation
+## 4:1 MUX Data Flow Implementation
 ```
 // mux4_to_1_dataflow.v
 module mux4x1_dataflow(output Y, input I0, I1, I2, I3, input S0,S1);
@@ -88,7 +88,7 @@ endmodule
 ```
 ## OUTPUT
 ![dataflow](https://github.com/user-attachments/assets/6ca0b4b7-ec5b-4818-80dd-85b261449f80)
-# 4:1 MUX Behavioral Implementation
+## 4:1 MUX Behavioral Implementation
 ```
 module mux4x1_behavioral(output reg Y, input I0, I1, I2, I3, input
 S0, S1);
@@ -106,7 +106,7 @@ endmodule
 ```
 ## OUTPUT
 ![behav](https://github.com/user-attachments/assets/9dfaa082-fec4-4db0-b11b-4d3148ce3a1e)
-# 4:1 MUX Structural Implementation
+## 4:1 MUX Structural Implementation
 ```
 module mux4x1_structural(output Y, input I0, I1, I2, I3, input S0,S1);
  wire a, b, c, d;
@@ -120,7 +120,7 @@ endmodule
 ```
 ## OUTPUT
 ![structural](https://github.com/user-attachments/assets/06acd746-bb0a-42ec-a633-d49ca3af6563)
-# Testbench Implementation
+## Testbench Implementation
 ```
 module tb_mux4x1;
  reg I0, I1, I2, I3;
